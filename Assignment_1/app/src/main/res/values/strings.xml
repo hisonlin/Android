@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Assignment 1</string>
+    <string name="title">Assignment 1</string>
+    <string name="go_btn">Let\'s Go!</string>
+    <string name="nameInputBox">Name:</string>
+    <string name="submit_btn">Submit</string>
+    <string name="error_msg">Please enter your name</string>
+</resources>
