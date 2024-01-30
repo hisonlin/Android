@@ -1,13 +1,13 @@
 package com.example.exercise4;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import java.util.Objects;
 
 public class CourseDetailActivity extends AppCompatActivity {
     @Override
@@ -18,6 +18,13 @@ public class CourseDetailActivity extends AppCompatActivity {
         // Get the TextView where you want to display the course detail
         TextView courseID = findViewById(R.id.courseID);
         TextView detail = findViewById(R.id.detail);
+        ImageView homeBtn = findViewById(R.id.homeBtn);
+
+        homeBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(CourseDetailActivity.this, MainActivity.class);
+            startActivity(intent);
+
+        });
 
         // Retrieve the course name passed from MainActivity
         String courseName = getIntent().getStringExtra("courseName");
@@ -25,24 +32,24 @@ public class CourseDetailActivity extends AppCompatActivity {
         // Set the course name on the TextView to display it
         courseID.setText(courseName);
 
-        switch (courseName) {
+        switch (Objects.requireNonNull(courseName)) {
             case "CSTP 2204":
-                detail.setText("IT Development Project");
+                detail.setText(R.string.project);
                 break;
             case "CSTP 2205":
-                detail.setText("Android Mobile App Programming");
+                detail.setText(R.string.android);
                 break;
             case "CSTP 2208":
-                detail.setText("Career Path Search");
+                detail.setText(R.string.career);
                 break;
             case "CSTP 2301":
-                detail.setText("Emerging Technologies");
+                detail.setText(R.string.emerging);
                 break;
             case "CSTP 2305":
-                detail.setText("IOS Mobile App Programming");
+                detail.setText(R.string.ios);
                 break;
             default:
-                detail.setText("Course not found");
+                detail.setText(R.string.notFound);
                 break;
         }
 

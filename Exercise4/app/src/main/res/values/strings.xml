@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Exercise4</string>
+    <string name="home">home</string>
+    <string name="project">IT Development Project</string>
+    <string name="android">Android Mobile App Programming</string>
+    <string name="career">Career Path Search</string>
+    <string name="emerging">Emerging Technologies</string>
+    <string name="ios">IOS Mobile App Programming</string>
+    <string name="notFound">Course not found</string>
 </resources>
