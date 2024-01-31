@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BasketballScoreCounter</string>
+    <string name="teamA">Team A</string>
+    <string name="teamb">Team B</string>
+    <string name="scoreA">0</string>
+    <string name="one">+1</string>
+    <string name="two">+2</string>
+    <string name="three">+3</string>
+    <string name="undo">undo</string>
+    <string name="reset">reset</string>
+    <string name="restart">restart</string>
+</resources>
